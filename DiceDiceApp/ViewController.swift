@@ -8,13 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var lblSetSonucu: UILabel!
     
+    @IBOutlet weak var lblSetSonucu: UILabel!
     @IBOutlet weak var lbl2OyuncuPuan: UILabel!
     @IBOutlet weak var lbl1OyuncuPuan: UILabel!
     @IBOutlet weak var lbl2OyuncuSkor: UILabel!
+    
     @IBOutlet weak var imgZar1: UIImageView!
     @IBOutlet weak var imgZar2: UIImageView!
+    
     @IBOutlet weak var lbl1OyuncuSkor: UILabel!
     @IBOutlet weak var imgOyuncuDurum2: UIImageView!
     @IBOutlet weak var imgOyuncuDurum1: UIImageView!
@@ -23,7 +25,6 @@ class ViewController: UIViewController {
     var oyuncuPuanlari = (birinciOyuncuPuani : 0 , ikinciOyuncuPuani : 0)
     var oyuncuSkorlari = (birinciOyuncuSkoru : 0 , ikinciOyuncuSkorlari : 0)
     var oyuncuSira : Int = 1
-    
     var maxSetSayisi : Int = 5
     var suankiSet : Int = 1
     
@@ -36,8 +37,6 @@ class ViewController: UIViewController {
             
         self.view.backgroundColor = UIColor(patternImage: arkaPlan)
             
-            
-            
         }
         
     }
@@ -48,9 +47,7 @@ class ViewController: UIViewController {
         if suankiSet > maxSetSayisi {
             return
         }
-        
-        
-        
+
         
         zarDegerleriniUret()
     }
