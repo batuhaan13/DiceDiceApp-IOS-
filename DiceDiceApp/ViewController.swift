@@ -57,12 +57,12 @@ class ViewController: UIViewController {
     func setSonucu(zar1 : Int, zar2 : Int) {
         if oyuncuSira == 1 { //1.set daha yeni başladı ve 1. oyuncu zar atar.
             
-            oyuncuPuanlari.birinciOyuncuPuani = zar1 + zar2  //Bu şekilde yapıldığında 1. oyuncunun puanı kaydediliyor.
-            lbl1OyuncuPuan.text = String(oyuncuPuanlari.birinciOyuncuPuani) //Bu şekilde yeşil olan skor ifadesi değişecektir.
+            oyuncuPuanlari.birinciOyuncuPuani = zar1 + zar2  
+            lbl1OyuncuPuan.text = String(oyuncuPuanlari.birinciOyuncuPuani) 
             imgOyuncuDurum1.image = UIImage(named: "bekle")
             imgOyuncuDurum2.image = UIImage(named: "onay")
             lblSetSonucu.text = "Sıra 2.Oyuncuda"
-            oyuncuSira = 2 // oyuncu sira değişmezse sürekli soldaki oyuncu oynanacaktır.
+            oyuncuSira = 2 
             lbl2OyuncuPuan.text = "0"
             
         } else {
@@ -72,11 +72,10 @@ class ViewController: UIViewController {
             imgOyuncuDurum1.image = UIImage(named: "onay")
             imgOyuncuDurum2.image = UIImage(named: "bekle")
             oyuncuSira = 1
-            //Seti bitirme işlemleri
+            //Seti bitirme işlemleri ( set finishing process )
             
             
             if oyuncuPuanlari.birinciOyuncuPuani > oyuncuPuanlari.ikinciOyuncuPuani {
-                //birinci oyuncu oyunu kazandı.
                 
                 oyuncuSkorlari.birinciOyuncuSkoru += 1
                 lblSetSonucu.text = "\(suankiSet). Seti 1. Oyuncu Kazandı"
@@ -90,8 +89,6 @@ class ViewController: UIViewController {
                 lbl2OyuncuSkor.text = String(oyuncuSkorlari.ikinciOyuncuSkorlari)
                 
             } else {
-                // oyun berabere kaldı
-                //set sayısı değiştirilmemeli
                 lblSetSonucu.text = "\(suankiSet). Set Berabere Sona Erdi"
             }
             
